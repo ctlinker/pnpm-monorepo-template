@@ -1,2 +1,2 @@
-./tools/cmd/main.sh can-you-commit-here
-npx lint-staged
+# ./tools/cmd/main.sh can-you-commit-here
+pnpm exec lint-staged
