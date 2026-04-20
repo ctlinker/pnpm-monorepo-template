@@ -1,0 +1,2 @@
+./tools/cmd/main.sh can-you-commit-here
+npx lint-staged

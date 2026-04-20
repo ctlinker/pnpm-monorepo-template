@@ -1,0 +1,30 @@
+{
+  "name": "@template/monorepo",
+  "version": "0.0.0",
+  "description": "A modern pnpm monorepo template with tsup, vitest, and changesets.",
+  "private": true,
+  "scripts": {
+    "changeset": "pnpm exec changeset",
+    "format": "prettier --write .",
+    "tool": "./tools/cmd/main.sh",
+    "prepare": "husky",
+    "docs:dev": "node docs/scripts/sync-latest.js && vitepress dev docs",
+    "docs:build": "node docs/scripts/sync-latest.js && vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.31.0",
+    "@types/node": "^22.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitepress": "2.0.0-alpha.17",
+    "vitest": "^4.1.4"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  },
+  "packageManager": "pnpm@10.28.1"
+}
